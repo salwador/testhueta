@@ -1,0 +1,28 @@
+{
+  "name": "querybuild",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "scripts": {
+    "install": "node-gyp rebuild",
+    "watch": "tsc --watch",
+    "tsbuild": "tsc --project tsconfig.json",
+    "test": "npm run tsbuild && node ./dist/test/index.js",
+		"bench": "npm run tsbuild && node dist/benchmark/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.7.2",
+    "benchmark": "^2.1.4",
+    "http-build-query": "^0.7.0",
+    "qs": "^6.13.0",
+    "typescript": "^5.6.2",
+    "uvu": "^0.5.6"
+  },
+  "gypfile": true,
+  "dependencies": {
+    "node-addon-api": "^8.1.0",
+    "node-gyp": "^10.2.0"
+  }
+}
